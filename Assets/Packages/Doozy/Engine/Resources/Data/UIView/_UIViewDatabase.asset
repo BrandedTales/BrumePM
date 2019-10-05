@@ -18,9 +18,9 @@ MonoBehaviour:
   - General
   - HUD
   - Land
-  - 
+  - Hero
   Categories:
   - {fileID: 11400000, guid: 4caf20371acaf404e8c5e9ffdacb3aab, type: 2}
+  - {fileID: 11400000, guid: 4562b0a97240d78489cf357d16662f49, type: 2}
   - {fileID: 11400000, guid: 4a54d6f31dcb9ce4a8fa31fa16a98e22, type: 2}
   - {fileID: 11400000, guid: d1cd4e788ed695545acf7988af5bcc33, type: 2}
-  - {fileID: 11400000, guid: 2ffcf2a4fcfaf06458e04b61c8c0d74b, type: 2}
