@@ -13,12 +13,23 @@ namespace BT.Brume.Managers
 
         [SerializeField] GameEvent setupGame;
 
+        [SerializeField] List<HeroContent> heroList;
+        [SerializeField] HeroIndex heroIndex;
+
         // Start is called before the first frame update
         void Start()
         {
+            InitializeIndexes();
             setupGame.Raise();
         }
 
-        
+        private void InitializeIndexes()
+        {
+            heroIndex.heroList.Clear();
+            foreach (HeroContent hc in heroList)
+            {
+                heroIndex.heroList.Add(hc);
+            }
+        }
     }
 }

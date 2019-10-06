@@ -6,16 +6,22 @@ using BT.Variables;
 
 namespace BT.Brume
 {
-    [CreateAssetMenu(menuName ="Heroes/Content")]
-    public class HeroContent : ScriptableObject
+    public class Hero
     {
         public string heroName;
         public string flavor;
 
         public Sprite cardImage;
 
-        public List<Trait> traits;
 
+
+        public Hero (HeroContent hc)
+        {
+            heroName = hc.heroName;
+            flavor = hc.flavor;
+            cardImage = hc.cardImage;
+
+        }
 
     }
 }
