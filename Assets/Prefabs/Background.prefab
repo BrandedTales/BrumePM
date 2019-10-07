@@ -1,5 +1,84 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147075491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147075492}
+  - component: {fileID: 147075493}
+  - component: {fileID: 147075494}
+  m_Layer: 0
+  m_Name: HeroManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &147075492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147075491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8420642352409405465}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &147075493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147075491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271aae15cec8ff047b7cb18542854c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHeroCount:
+    useConstant: 1
+    constantValue: 2
+    variable: {fileID: 0}
+  heroDisplay: {fileID: 6373614395021520607, guid: 0abc72182a620e6409e7ecb0f8fa1abd,
+    type: 3}
+  heroSpace: {fileID: 0}
+  heroIndex: {fileID: 11400000, guid: 2b76e627b3eaaf947b77cd95b560f14c, type: 2}
+--- !u!114 &147075494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147075491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e48d5d43ffd12e42afbc11ea95c088c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 0a61dbe454569f8469e96bb27fb2963b, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 147075493}
+        m_MethodName: SetupHeroes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &623962781
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,6 +90,7 @@ GameObject:
   - component: {fileID: 623962782}
   - component: {fileID: 623962784}
   - component: {fileID: 623962783}
+  - component: {fileID: 623962785}
   m_Layer: 0
   m_Name: TurnManager
   m_TagString: Untagged
@@ -75,6 +155,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &623962785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623962781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e48d5d43ffd12e42afbc11ea95c088c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 0a61dbe454569f8469e96bb27fb2963b, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 623962784}
+        m_MethodName: ResetTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &884736686
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,40 +225,181 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3712144f8c509fc499bce9d0bc4e4820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroStartCount:
-    useConstant: 1
+  setupGame: {fileID: 11400000, guid: 0a61dbe454569f8469e96bb27fb2963b, type: 2}
+  heroList:
+  - {fileID: 11400000, guid: ccf5e4abf63be2944951d65795bb2a3f, type: 2}
+  - {fileID: 11400000, guid: db162a3189094cf4d9019564ac71cfeb, type: 2}
+  - {fileID: 11400000, guid: ab4340c7dd3aec44abe5073adb1ccdff, type: 2}
+  - {fileID: 11400000, guid: de88e560af032b640bad084f12565e7b, type: 2}
+  - {fileID: 11400000, guid: c146e5f155d801f4c9c9ffc07a19ce3d, type: 2}
+  heroIndex: {fileID: 11400000, guid: 2b76e627b3eaaf947b77cd95b560f14c, type: 2}
+  landList:
+  - {fileID: 11400000, guid: 2a6be74795929f84b8a7b75784bad9e8, type: 2}
+  - {fileID: 11400000, guid: a5b0ca63b5df4984ba855cdbbae3a413, type: 2}
+  - {fileID: 11400000, guid: 2ac9f75b11b4840469dc021809c66438, type: 2}
+  - {fileID: 11400000, guid: 960883676c474e94492ae02f52b10298, type: 2}
+  - {fileID: 11400000, guid: 46bc49c375c8c5b41a33ed9b0927b112, type: 2}
+  - {fileID: 11400000, guid: 7571a0ac44ae5a349b715a2ab559f5f1, type: 2}
+  - {fileID: 11400000, guid: 9f130204e5f6ce64eac7a58486528888, type: 2}
+  landIndex: {fileID: 11400000, guid: 38c505fbe36fc314d90c263460edeab5, type: 2}
+--- !u!1 &987570374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 987570375}
+  - component: {fileID: 987570377}
+  - component: {fileID: 987570376}
+  m_Layer: 0
+  m_Name: LandManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &987570375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987570374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8420642352409405465}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &987570377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987570374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6cc7ec10a1d0d4187b78d0a9a7ebb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  landDisplay: {fileID: 1494533028829019578, guid: 23623b7b6765353418c4df91a898e74f,
+    type: 3}
+  landSpace: {fileID: 0}
+  landIndex: {fileID: 11400000, guid: 38c505fbe36fc314d90c263460edeab5, type: 2}
+--- !u!114 &987570376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987570374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e48d5d43ffd12e42afbc11ea95c088c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 0a61dbe454569f8469e96bb27fb2963b, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 987570377}
+        m_MethodName: SetupLand
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1859547936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859547937}
+  - component: {fileID: 1859547938}
+  - component: {fileID: 1859547939}
+  m_Layer: 0
+  m_Name: ResourceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1859547937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859547936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8420642352409405465}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1859547938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859547936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed3977068c1bb2439ee5c6c913339e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  population:
+    useConstant: 0
     constantValue: 0
-    variable: {fileID: 0}
-  spawnHero: {fileID: 0}
-  generateLand: {fileID: 0}
-  defaultContent: {fileID: 0}
-  availableHeroes: {fileID: 0}
-  availableLands: {fileID: 0}
-  startingTurn:
-    useConstant: 1
+    variable: {fileID: 11400000, guid: 9d7c4d543c7ad1b43bf30a02164921dd, type: 2}
+  gold:
+    useConstant: 0
     constantValue: 0
-    variable: {fileID: 0}
-  heroSpawnCounter:
-    useConstant: 1
+    variable: {fileID: 11400000, guid: 88aeb6d00f2f261498fa79307b3d2402, type: 2}
+  material:
+    useConstant: 0
     constantValue: 0
-    variable: {fileID: 0}
-  landSpawnCounter: {fileID: 0}
-  brumeUnlocked:
-    useConstant: 1
-    constantValue: 0
-    variable: {fileID: 0}
-  activeBrumeLevel:
-    useConstant: 1
-    constantValue: 0
-    variable: {fileID: 0}
-  brumeCounter:
-    useConstant: 1
-    constantValue: 0
-    variable: {fileID: 0}
-  initialLandCount:
-    useConstant: 1
-    constantValue: 0
-    variable: {fileID: 0}
+    variable: {fileID: 11400000, guid: 88aeb6d00f2f261498fa79307b3d2402, type: 2}
+--- !u!114 &1859547939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859547936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e48d5d43ffd12e42afbc11ea95c088c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 0a61dbe454569f8469e96bb27fb2963b, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1859547938}
+        m_MethodName: ResetResources
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8420642352409405471
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +430,9 @@ Transform:
   m_Children:
   - {fileID: 623962782}
   - {fileID: 884736687}
+  - {fileID: 147075492}
+  - {fileID: 987570375}
+  - {fileID: 1859547937}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -16,3 +16,7 @@ MonoBehaviour:
   flavor: 
   cardImage: {fileID: 21300000, guid: df296c6b3d13aab4e8b175babab45618, type: 3}
   isHomeland: 0
+  startingPopulation: 50
+  goldIncome: 3
+  materialIncome: 3
+  manaIncome: 15

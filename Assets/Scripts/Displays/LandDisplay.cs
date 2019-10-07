@@ -10,9 +10,13 @@ namespace BT.Brume
 {
     public class LandDisplay : MonoBehaviour
     {
-
+        [Header("UI Hookups")]
         [SerializeField] TextMeshProUGUI landName;
         [SerializeField] Image portrait;
+        [SerializeField] TextMeshProUGUI populationTMP;
+        [SerializeField] TextMeshProUGUI goldTMP;
+        [SerializeField] TextMeshProUGUI materialTMP;
+
 
         public Land land;
 
@@ -29,6 +33,20 @@ namespace BT.Brume
             {
                 landName.text = land.landName;
                 portrait.sprite = land.cardImage;
+                populationTMP.text = land.population.ToString();
+                goldTMP.text = land.goldIncome.ToString();
+                materialTMP.text = land.materialIncome.ToString();
+
+                if (land.goldIncome < 0)
+                {
+                    goldTMP.color = Color.red;
+                }
+
+                if (land.materialIncome < 0)
+                {
+                    materialTMP.color = Color.red;
+                }
+
             }
         }
     }

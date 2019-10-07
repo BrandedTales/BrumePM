@@ -10,11 +10,18 @@ namespace BT.Brume
 {
     public class HUDDisplay : MonoBehaviour
     {
-
+        [Header("Values")]
         [SerializeField] FloatReference turnNumber;
-        [SerializeField] TextMeshProUGUI tmpTurnNumber;
-
+        [SerializeField] FloatReference populationNumber;
+        [SerializeField] FloatReference goldNumber;
+        [SerializeField] FloatReference materialNumber;
         [SerializeField] GameEvent NextTurn;
+
+        [Header("UI Hookups")]
+        [SerializeField] TextMeshProUGUI TurnNumberTMP;
+        [SerializeField] TextMeshProUGUI populationTMP;
+        [SerializeField] TextMeshProUGUI goldTMP;
+        [SerializeField] TextMeshProUGUI materialTMP;
 
 
         // Start is called before the first frame update
@@ -27,13 +34,30 @@ namespace BT.Brume
         void Update()
         {
             RefreshTurnNumber();
+            RefreshResources();
+        }
+
+        private void RefreshResources()
+        {
+            if (populationNumber != null)
+            {
+                populationTMP.text = populationNumber.ToString();
+            }
+            if (goldNumber != null)
+            {
+                goldTMP.text = goldNumber.ToString();
+            }
+            if (materialNumber != null)
+            {
+                materialTMP.text = materialNumber.ToString();
+            }
         }
 
         private void RefreshTurnNumber()
         {
             if (turnNumber != null)
             {
-                tmpTurnNumber.text = "Turn: " + turnNumber.ToString();
+                TurnNumberTMP.text = "Turn: " + turnNumber.ToString();
             }
         }
 

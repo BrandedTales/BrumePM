@@ -10,9 +10,14 @@ namespace BT.Brume.Managers
 {
     public class LandManager : MonoBehaviour
     {
+
+        [Header("Components")]
         [SerializeField] LandDisplay landDisplay;
         [SerializeField] GameObject landSpace;
         [SerializeField] LandIndex landIndex;
+
+        //[Header("Attributes")]
+        
 
         public void SetupLand()
         {
@@ -27,6 +32,11 @@ namespace BT.Brume.Managers
             LandDisplay newLand = Instantiate(landDisplay, landSpace.transform);
             newLand.land = randomLand;
             Debug.Log("Display: " + newLand.land.landName);
+        }
+
+        public void TEST_AddNewLand()
+        {
+            AddNewLand(new Land(landIndex.RandomLand()));
         }
     }
 }
