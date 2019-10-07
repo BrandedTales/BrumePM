@@ -22,6 +22,8 @@ namespace BT.Brume
             landName = lc.landName;
             flavor = lc.flavor;
 
+            cardImage = lc.cardImage;
+
             isHomeland = lc.isHomeland;
         }
 

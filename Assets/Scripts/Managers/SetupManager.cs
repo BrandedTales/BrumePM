@@ -16,6 +16,9 @@ namespace BT.Brume.Managers
         [SerializeField] List<HeroContent> heroList;
         [SerializeField] HeroIndex heroIndex;
 
+        [SerializeField] List<LandContent> landList;
+        [SerializeField] LandIndex landIndex;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -30,6 +33,13 @@ namespace BT.Brume.Managers
             {
                 heroIndex.heroList.Add(hc);
             }
+
+            landIndex.landList.Clear();
+            foreach (LandContent lc in landList)
+            {
+                landIndex.landList.Add(lc);
+            }
         }
+
     }
 }

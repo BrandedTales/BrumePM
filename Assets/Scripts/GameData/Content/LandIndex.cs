@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BT.Brume
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName ="Land/Index")]
     public class LandIndex : ScriptableObject
     {
         public List<LandContent> landList;
