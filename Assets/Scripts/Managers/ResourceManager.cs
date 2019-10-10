@@ -13,6 +13,7 @@ namespace BT.Brume.Managers
         [SerializeField] FloatReference population;
         [SerializeField] FloatReference gold;
         [SerializeField] FloatReference material;
+        [SerializeField] FloatReference morale;
 
         [SerializeField] GameObject landPanel;
 
@@ -33,7 +34,7 @@ namespace BT.Brume.Managers
                 LandDisplay lc = child.GetComponent<LandDisplay>();
                 if (lc == null) continue;
 
-                lc.land.AdjustPopulation();
+                lc.land.AdjustPopulation(morale);
                 population.SetValue(population + lc.land.population);
 
                 gold.SetValue(gold + lc.land.goldIncome);

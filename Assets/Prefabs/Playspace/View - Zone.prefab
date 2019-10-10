@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 112609331058438894}
   - component: {fileID: 8048134051547919564}
   - component: {fileID: -2735887851466915082}
+  - component: {fileID: 8345162409963339822}
   m_Layer: 0
-  m_Name: Canvas - ZoneCanvas
+  m_Name: View - Zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,8 +553,21 @@ MonoBehaviour:
   UpdateHideProgressorOnShow: 0
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
-  ViewCategory: General
-  ViewName: Unnamed
+  ViewCategory: Land
+  ViewName: Zone
+--- !u!114 &8345162409963339822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112609331058438880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe16bee896e94b34faace097468214e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tokenImage: {fileID: 112609332709126623}
 --- !u!1 &112609332709126609
 GameObject:
   m_ObjectHideFlags: 0

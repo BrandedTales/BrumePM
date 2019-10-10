@@ -3145,6 +3145,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManagers
       objectReference: {fileID: 0}
+    - target: {fileID: 987570377, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
+      propertyPath: landSpace
+      value: 
+      objectReference: {fileID: 888731535}
+    - target: {fileID: 987570377, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
+      propertyPath: villageZone
+      value: 
+      objectReference: {fileID: 11400000, guid: 5cb48f3d984668b40a6ae970170d78f0,
+        type: 2}
+    - target: {fileID: 987570377, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
+      propertyPath: ruinZone
+      value: 
+      objectReference: {fileID: 11400000, guid: 38b5e5adca2f996458028f0cc556a771,
+        type: 2}
+    - target: {fileID: 987570377, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
+      propertyPath: forestZone
+      value: 
+      objectReference: {fileID: 11400000, guid: a54c72513acd12c40971f2c3fe2e7fdf,
+        type: 2}
+    - target: {fileID: 987570377, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
+      propertyPath: mountainZone
+      value: 
+      objectReference: {fileID: 11400000, guid: ca1983dbb3e0c5a47aa679d4b8ac3851,
+        type: 2}
+    - target: {fileID: 1859547938, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
+      propertyPath: gold.variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 785d4a2959fbd2848bb8622661256cb8,
+        type: 2}
+    - target: {fileID: 1859547938, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
+      propertyPath: landPanel
+      value: 
+      objectReference: {fileID: 888731535}
     - target: {fileID: 8420642352409405465, guid: b0eaa1daeee2ee7419ff62065f8f01ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3204,19 +3237,6 @@ PrefabInstance:
       propertyPath: heroSpace
       value: 
       objectReference: {fileID: 309469396}
-    - target: {fileID: 987570377, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
-      propertyPath: landSpace
-      value: 
-      objectReference: {fileID: 888731535}
-    - target: {fileID: 1859547938, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
-      propertyPath: gold.variable
-      value: 
-      objectReference: {fileID: 11400000, guid: 785d4a2959fbd2848bb8622661256cb8,
-        type: 2}
-    - target: {fileID: 1859547938, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
-      propertyPath: landPanel
-      value: 
-      objectReference: {fileID: 888731535}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0eaa1daeee2ee7419ff62065f8f01ab, type: 3}
 --- !u!1001 &8795889449382056818

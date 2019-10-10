@@ -2123,6 +2123,9 @@ MonoBehaviour:
   populationTMP: {fileID: 8920721446673460666}
   goldTMP: {fileID: 3365755646118975410}
   materialTMP: {fileID: 3714391566174537136}
+  zoneDisplay: {fileID: 8345162409963339822, guid: 1c78e98950b0f654e9fb4008f0d00d30,
+    type: 3}
+  zonePanel: {fileID: 6228014757455274807}
 --- !u!1 &8019148503994517101
 GameObject:
   m_ObjectHideFlags: 0

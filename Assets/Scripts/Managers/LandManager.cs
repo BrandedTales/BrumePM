@@ -16,6 +16,13 @@ namespace BT.Brume.Managers
         [SerializeField] GameObject landSpace;
         [SerializeField] LandIndex landIndex;
 
+        [Header("ZoneContent")]
+        [SerializeField] ZoneContent villageZone;
+        [SerializeField] ZoneContent ruinZone;
+        [SerializeField] ZoneContent forestZone;
+        [SerializeField] ZoneContent mountainZone;
+
+
         //[Header("Attributes")]
         
 
@@ -31,6 +38,7 @@ namespace BT.Brume.Managers
         {
             LandDisplay newLand = Instantiate(landDisplay, landSpace.transform);
             newLand.land = randomLand;
+            newLand.AddZoneObject(villageZone);
             Debug.Log("Display: " + newLand.land.landName);
         }
 
