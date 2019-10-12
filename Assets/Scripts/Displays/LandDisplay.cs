@@ -19,8 +19,8 @@ namespace BT.Brume
         [SerializeField] TextMeshProUGUI materialTMP;
 
         [Header("Zone Hookups")]
-        [SerializeField] ZoneDisplay zoneDisplay;
-        [SerializeField] GameObject zonePanel;
+        public ZoneDisplay zoneDisplay;
+        public GameObject zonePanel;
 
 
         public Land land;
@@ -56,13 +56,6 @@ namespace BT.Brume
 
         }
 
-        public void AddZoneObject(ZoneContent zc)
-        {
-            var zone = new Zone(zc);
-            ZoneDisplay newZone = Instantiate(zoneDisplay, zonePanel.transform);
-            land.AddZone(zone);  //I really don't like this since I try to avoid having the Displays do any business logic.
-            newZone.zone = zone;
 
-        }
     }
 }

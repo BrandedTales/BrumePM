@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46e1cf3b06fa4d84b8d611f3934caf5e, type: 3}
-  m_Name: Mana
+  m_Name: DefaultMaxPopulation
   m_EditorClassIdentifier: 
-  Description: 
-  value: 0
+  Description: 'Default starting value for max population
+
+    on new lands.'
+  value: 500

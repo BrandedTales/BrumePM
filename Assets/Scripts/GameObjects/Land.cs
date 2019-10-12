@@ -63,18 +63,24 @@ namespace BT.Brume
         {
             //Base Adjustment
             float populationAdjustment = POP_ADJUST * maxPopulation;
+            Debug.Log("Base adjustment: " + populationAdjustment);
             //Modified by Current Population
             populationAdjustment *= (1 - (population / maxPopulation));
+            Debug.Log("Current Population: " + populationAdjustment + " / " + maxPopulation);
             //Modify by Morale
             populationAdjustment *= morale;
+            Debug.Log("Morale: " + populationAdjustment);
 
             //TODO:  Modify by other adjustments once I come up with them (zones, governer, hero tasks, threats, events, etc)
 
             //And Randomize!
             populationAdjustment *= Random.Range((1 - VARIANCE), (1 + VARIANCE));
+            Debug.Log("Randomized: " + populationAdjustment);
+
 
             //Great!  Now update it!
-            population += Mathf.RoundToInt(populationAdjustment);
+            population += (Mathf.RoundToInt(populationAdjustment));
+            Debug.Log("New pop: " + population);
         }
 
         public void AddZone(Zone zone)

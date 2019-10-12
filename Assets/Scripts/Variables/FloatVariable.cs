@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace BT.Variables
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Variables/Float")]
     public class FloatVariable : ScriptableObject
     {
 #if UNITY_EDITOR

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace BT.Variables
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName ="Variables/String")]
     public class StringVariable : ScriptableObject
     {
 #if UNITY_EDITOR

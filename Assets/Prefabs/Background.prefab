@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 987570375}
   - component: {fileID: 987570377}
   - component: {fileID: 987570376}
+  - component: {fileID: 1847925329}
   m_Layer: 0
   m_Name: LandManager
   m_TagString: Untagged
@@ -286,10 +287,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6cc7ec10a1d0d4187b78d0a9a7ebb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  landDisplay: {fileID: 1494533028829019578, guid: 23623b7b6765353418c4df91a898e74f,
+  landPrefab: {fileID: 1494533028829019578, guid: 23623b7b6765353418c4df91a898e74f,
     type: 3}
   landSpace: {fileID: 0}
   landIndex: {fileID: 11400000, guid: 38c505fbe36fc314d90c263460edeab5, type: 2}
+  villageZone: {fileID: 11400000, guid: 5cb48f3d984668b40a6ae970170d78f0, type: 2}
+  ruinZone: {fileID: 11400000, guid: 38b5e5adca2f996458028f0cc556a771, type: 2}
+  forestZone: {fileID: 11400000, guid: a54c72513acd12c40971f2c3fe2e7fdf, type: 2}
+  mountainZone: {fileID: 11400000, guid: ca1983dbb3e0c5a47aa679d4b8ac3851, type: 2}
 --- !u!114 &987570376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,6 +322,79 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1847925329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987570374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e48d5d43ffd12e42afbc11ea95c088c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 10c75b71e374f3c4a983b90fb8e24d56, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 987570377}
+        m_MethodName: SpawnZone
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1131922060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131922061}
+  - component: {fileID: 1131922062}
+  m_Layer: 0
+  m_Name: ActivePieceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1131922061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131922060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8420642352409405465}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1131922062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131922060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a84dde410b53644bad4087b53580d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeType: 0
+  activeLand: {fileID: 0}
+  activeHero: {fileID: 0}
 --- !u!1 &1859547936
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +406,7 @@ GameObject:
   - component: {fileID: 1859547937}
   - component: {fileID: 1859547938}
   - component: {fileID: 1859547939}
+  - component: {fileID: 1859547940}
   m_Layer: 0
   m_Name: ResourceManager
   m_TagString: Untagged
@@ -368,11 +447,16 @@ MonoBehaviour:
   gold:
     useConstant: 0
     constantValue: 0
-    variable: {fileID: 11400000, guid: 88aeb6d00f2f261498fa79307b3d2402, type: 2}
+    variable: {fileID: 11400000, guid: 785d4a2959fbd2848bb8622661256cb8, type: 2}
   material:
     useConstant: 0
     constantValue: 0
     variable: {fileID: 11400000, guid: 88aeb6d00f2f261498fa79307b3d2402, type: 2}
+  morale:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: b7a5ee1ff2e08b5498a827822194a319, type: 2}
+  landPanel: {fileID: 0}
 --- !u!114 &1859547939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +475,33 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1859547938}
         m_MethodName: ResetResources
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1859547940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859547936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e48d5d43ffd12e42afbc11ea95c088c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 5790e50169e45684ea5475cee0c73632, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1859547938}
+        m_MethodName: UpdateResources
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -433,6 +544,7 @@ Transform:
   - {fileID: 147075492}
   - {fileID: 987570375}
   - {fileID: 1859547937}
+  - {fileID: 1131922061}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

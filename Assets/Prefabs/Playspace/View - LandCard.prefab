@@ -1559,6 +1559,7 @@ GameObject:
   - component: {fileID: 7825564252665083887}
   - component: {fileID: -1353543621323729777}
   - component: {fileID: 1494533028829019578}
+  - component: {fileID: 8977321164215559913}
   m_Layer: 0
   m_Name: View - LandCard
   m_TagString: Untagged
@@ -1679,7 +1680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebugMode: 0
   StartPosition: {x: 0, y: 0, z: 0}
-  StartRotation: {x: 0, y: 0, z: 0}
+  StartRotation: {x: -0, y: 0, z: 0}
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
   AutoHideAfterShow: 0
@@ -2126,6 +2127,19 @@ MonoBehaviour:
   zoneDisplay: {fileID: 8345162409963339822, guid: 1c78e98950b0f654e9fb4008f0d00d30,
     type: 3}
   zonePanel: {fileID: 6228014757455274807}
+--- !u!114 &8977321164215559913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7669212567492888440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0feeb5e357e71ba4ba2254aa30d562f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnZone: {fileID: 11400000, guid: 10c75b71e374f3c4a983b90fb8e24d56, type: 2}
 --- !u!1 &8019148503994517101
 GameObject:
   m_ObjectHideFlags: 0

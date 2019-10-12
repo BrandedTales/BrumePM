@@ -16,11 +16,11 @@ namespace BT.Brume
 
         [Header("Mechanics")]
         public bool isHomeland;
-        public float startingPopulation;
-        public float maxPopulation;
-        public float goldIncome;
-        public float materialIncome;
-        public float manaIncome;
+        public FloatReference startingPopulation;
+        public FloatReference maxPopulation;
+        public FloatReference goldIncome;
+        public FloatReference materialIncome;
+        public FloatReference manaIncome;
 
 
         //This section has been hardcoded for the zone types, but I'd love this to be popualted 

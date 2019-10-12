@@ -16,7 +16,27 @@ MonoBehaviour:
   flavor: 
   cardImage: {fileID: 21300000, guid: ec0d0236725bf2b448f24e840e31401e, type: 3}
   isHomeland: 0
-  startingPopulation: 90
-  goldIncome: 10
-  materialIncome: 10
-  manaIncome: 0
+  startingPopulation:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: 99df59b0dad9c7643b65d57b737c3600, type: 2}
+  maxPopulation:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: 48df12f22891b2e489db60ac501e500f, type: 2}
+  goldIncome:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: 02f26b2c5583b0047825a5a8d280c4a9, type: 2}
+  materialIncome:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: f407aaf7163f827438e4580fbf9e468a, type: 2}
+  manaIncome:
+    useConstant: 1
+    constantValue: 0
+    variable: {fileID: 0}
+  villageCount: 0
+  ruinCount: 0
+  forestCount: 5
+  mountainCount: 0
